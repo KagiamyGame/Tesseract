@@ -9,21 +9,18 @@ use pocketmine\Server;
 use pocketmine\Player;
 
 class TransferCommand extends VanillaCommand{
-    public function __construct($name)
-    {
+	
+    public function __construct($name){
         parent::__construct(
         $name,
         "%pocketmine.command.transfer.description",
         "%pocketmine.command.transfer.usage",
         ["transfer"]
-    );
+        );
         $this->setPermission("pocketmine.command.transfer");
     }
 
     public function execute(CommandSender $sender, $currentAlias, array $args){
-        if(!($this->testPermission($sender))){
-            return false;
-        }
 		if($sender instanceof Player){
         	$pk = new TransferPacket();
         	$pk->address = $args[0];
@@ -31,7 +28,7 @@ class TransferCommand extends VanillaCommand{
         	$sender->dataPacket($pk);
 
         	Command::broadcastCommandMessage($sender, "Transferred to " . $args[0] . ":" . $args[1]);
-		} else {
+		}else{
 			$sender->sendMessage("Run this command in game!");
 		}
     }
