@@ -6,6 +6,7 @@ use pocketmine\network\protocol\TransferPacket;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\Server;
+use pocketmine\Player;
 
 class TransferCommand extends VanillaCommand{
     public function __construct($name)
