@@ -9,8 +9,7 @@ class TransferPacket extends DataPacket{
     public $address;
     public $port;
 
-    public function decode()
-    {
+    public function decode(){
 
     }
 
