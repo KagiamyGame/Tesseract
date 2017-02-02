@@ -55,7 +55,7 @@ namespace pocketmine {
 	use pocketmine\utils\Utils;
 	use pocketmine\wizard\Installer;
 
-	const VERSION = "1.0.0dev";
+	const VERSION = "1.1.0";
 	const API_VERSION = "3.0.0";
 	const CODENAME = "Ruby";
 
